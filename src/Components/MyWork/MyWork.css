@@ -1,0 +1,60 @@
+.mywork {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 5rem 7rem;
+}
+
+.mywork-title {
+    position: relative;
+}
+
+.mywork-title h1 {
+    font-size: 3rem;
+}
+
+.mywork-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 50%;
+}
+
+.mywork-item h3 {
+    margin: 1rem;
+}
+
+.mywork-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+
+}
+
+.mywork-item img {
+    box-sizing: border-box;
+    width: 350px;
+}
+
+.mywork-item {
+    transition: 0.5s;
+}
+
+.mywork-item:hover {
+    transform: scale(1.05);
+}
+
+.mywork-item img:hover {
+    border: 3px solid   #DA7C25;
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 10px;
+}

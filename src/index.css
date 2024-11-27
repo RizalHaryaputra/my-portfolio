@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  background: rgb(88,43,2);
+background: linear-gradient(90deg, rgba(88,43,2,1) 0%, rgba(68,33,3,1) 5%, rgba(0,0,0,1) 50%, rgba(65,3,82,1) 95%, rgba(80,0,101,0.9781162464985994) 100%);
+  color: white;
+  overflow-x: hidden;
+}

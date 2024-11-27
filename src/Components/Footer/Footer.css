@@ -1,0 +1,135 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 7vw; /* Menggunakan vw agar lebih fleksibel */
+    gap: 2rem;
+    background: rgba(255,255,255,0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-top: 2px solid rgba(255, 255, 255, 0.389);
+}
+
+.footer-top {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Agar elemen membungkus saat di layar kecil */
+}
+
+.footer-top-left {
+    /* max-width: 400px; */
+    font-size: 1.25rem; /* Menggunakan rem */
+    text-align: justify;
+}
+
+.footer-top-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Supaya elemen membungkus pada layar kecil */
+}
+
+.footer-email-input {
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+    border-radius: 50px;
+    background: #32323B;
+    padding-right: 80px;
+    width: 100%; /* Ambil seluruh lebar layar pada tampilan mobile */
+    max-width: 500px; /* Batas maksimum untuk layar besar */
+}
+
+.footer-email-input:hover {
+    border: 2px solid white;
+}
+
+.footer-email-input input {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #a0a0a0;
+    font-family: 'Outfit';
+    font-size: 1rem; /* Menggunakan rem untuk responsivitas */
+}
+
+.footer-subscribe {
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
+    font-size: 1rem; /* Menggunakan rem */
+    padding: 20px 40px; /* Disesuaikan agar tombol tetap proporsional */
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Outfit';
+}
+
+.footer-subscribe:hover {
+    transform: scale(1.05);
+}
+
+.footer-bottom {
+    border-top: 1px solid white;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Agar elemen membungkus di layar kecil */
+    gap: 2rem; /* Jarak antar elemen pada layar kecil */
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /* Supaya membungkus di layar kecil */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 3vw; /* Padding lebih kecil pada layar mobile */
+    }
+
+    .footer-top {
+        flex-direction: column; /* Menjadi kolom di layar kecil */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-top-right {
+        justify-content: center;
+    }
+
+    .footer-email-input {
+        padding: 15px 20px; /* Mengurangi padding untuk layar kecil */
+        width: 100%; /* Ambil seluruh lebar layar */
+    }
+
+    .footer-subscribe {
+        padding: 15px 30px; /* Mengurangi padding tombol pada mobile */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Agar elemen ditampilkan vertikal di layar kecil */
+        align-items: center;
+    }
+
+    .footer-bottom-right {
+        justify-content: center; /* Menengah di layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top-left {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+        text-align: center;
+    }
+
+    .footer-email-input {
+        padding: 10px 15px; /* Padding lebih kecil untuk layar sangat kecil */
+        width: 100%;
+    }
+
+    .footer-subscribe {
+        padding: 10px 20px; /* Tombol lebih kecil untuk layar sangat kecil */
+    }
+}
