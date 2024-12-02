@@ -8,6 +8,7 @@
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     font-size: 17px;
+    
 }
 
 .nav-menu {
@@ -97,6 +98,7 @@
     }
 
     .nav-menu {
+        display: none;
         padding-top: 3rem;
         padding-bottom: 3rem;
         position: fixed;
@@ -117,7 +119,9 @@
 
     .nav-menu.open {
         transform: translateX(0);
+        display: block;
     }
+
 
     .nav-menu li {
         padding: 10px 20px;
@@ -132,7 +136,4 @@
         transition: background-color 0.3s ease, transform 0.3s ease;
         cursor: pointer;
     }
-
-
-
 }
