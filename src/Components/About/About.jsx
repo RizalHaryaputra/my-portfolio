@@ -20,17 +20,17 @@ const About = () => {
                         <p>I am continuously learning and expanding my skill set to stay on top of industry trends and ensure that every project I work on meets the highest standards of quality. Let’s collaborate and turn your ideas into reality!</p>
                     </div>
                     <div className="about-skills">
-                        <div className="about-skill"><p>Javascript</p><hr style={{ width: "85%" }} /></div>
-                        <div className="about-skill"><p>MySql</p><hr style={{ width: "70%" }} /></div>
+                        <div className="about-skill"><p>Laravel</p><hr style={{ width: "80%" }} /></div>
+                        <div className="about-skill"><p>Javascript</p><hr style={{ width: "70%" }} /></div>
                         <div className="about-skill"><p>React</p><hr style={{ width: "65%" }} /></div>
-                        <div className="about-skill"><p>PHP</p><hr style={{ width: "75%" }} /></div>
-                        <div className="about-skill"><p>Laravel</p><hr style={{ width: "70%" }} /></div>
+                        <div className="about-skill"><p>Tailwind</p><hr style={{ width: "75%" }} /></div>
+                        <div className="about-skill"><p>MySql</p><hr style={{ width: "70%" }} /></div>
                     </div>
                 </div>
             </div>
             <div className="about-achievements">
                 <div className="about-achievement">
-                    <h1>5+</h1>
+                    <h1>10+</h1>
                     <p>Web Development Projects Completed</p>
                 </div>
                 <hr />
