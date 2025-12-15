@@ -11,7 +11,10 @@ const Hero = () => {
             {/* <p>This is a paragraph of text</p> */}
             <div className="hero-action">
                 <div className="hero-connect"><AnchorLink className='link' href='#contact' offset={50}>Connect With Me</AnchorLink></div>
-                <div className="hero-resume">My resume</div>
+                <a href="https://drive.google.com/drive/folders/1zXvujlkjNO4Aj_KPyFhosR9QRhqaztwS?usp=drive_link" target="_blank" rel="noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                    <div className="hero-resume">My resume</div>
+                </a>
+
             </div>
         </div>
     )
