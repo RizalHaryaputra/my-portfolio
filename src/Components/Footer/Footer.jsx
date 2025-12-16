@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer">
             <div className="footer-top">
                 <div className="footer-top-left">
-                    <img width="50rem" src={logo} alt="" style={{marginBottom: '1rem'}}/>
+                    <img width="50rem" src={logo} alt="" style={{ marginBottom: '1rem' }} />
                     <p>Thank you for visiting my portfolio. As a junior web developer, I’m constantly developing my skills and experience to create innovative web solutions. Feel free to contact me for further discussions!</p>
                 </div>
                 <div className="footer-top-right">
@@ -25,9 +25,12 @@ const Footer = () => {
                     <p>&copy; 2025 All rights reserved</p>
                 </div>
                 <div className="footer-bottom-right">
-                    <p>Privacy Policy</p>
-                    <p>Terms of Services</p>
-                    <p>Connect with Me</p>
+                    <a href="/cv-rizal-haryaputra-2025.pdf" download="cv-rizal-haryaputra-2025.pdf" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <p>My Resume</p>
+                    </a>
+                    <a href="#contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <p>Connect with Me</p>
+                    </a>
                 </div>
             </div>
         </div>
