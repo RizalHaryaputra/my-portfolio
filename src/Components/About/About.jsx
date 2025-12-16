@@ -16,11 +16,13 @@ const About = () => {
                 </div>
                 <div className="about-right">
                     <div className="about-para">
-                        <p>I’m Rizal Haryaputra, a dedicated and ambitious Junior Web Developer from Indonesia with a passion for creating impactful and efficient web solutions. My journey in web development began with curiosity and quickly turned into a deep enthusiasm for coding and problem-solving. I specialize in building responsive, user-friendly websites using the latest technologies and best practices.</p>
-                        <p>I am continuously learning and expanding my skill set to stay on top of industry trends and ensure that every project I work on meets the highest standards of quality. Let’s collaborate and turn your ideas into reality!</p>
+                        <div className="about-para">
+                            <p>I’m Rizal Haryaputra, a high-achieving <strong>Fullstack Web Developer</strong> specializing in the <strong>Laravel Ecosystem (TALL Stack)</strong> and <strong>AI Integration</strong>. My journey is defined by a commitment to innovation, demonstrated by winning the <strong>1st Place National Abdidaya Award 2025</strong>. I am the creator of 'SADAKAH', a platform officially <strong>adopted by the Gunungkidul Government</strong>.</p>
+                            <p>Beyond academic excellence, I have professional experience as a <strong>Remote IT Support Specialist</strong> and have secured <strong>Intellectual Property Rights (HKI)</strong> for commercial projects. I ensure that every solution I build is not only technically robust but also impactful. Let’s collaborate and turn your visionary ideas into reality!</p>
+                        </div>
                     </div>
                     <div className="about-skills">
-                        <div className="about-skill"><p>Laravel</p><hr style={{ width: "80%" }} /></div>
+                        <div className="about-skill"><p>Laravel</p><hr style={{ width: "85%" }} /></div>
                         <div className="about-skill"><p>Javascript</p><hr style={{ width: "70%" }} /></div>
                         <div className="about-skill"><p>React</p><hr style={{ width: "65%" }} /></div>
                         <div className="about-skill"><p>Tailwind</p><hr style={{ width: "75%" }} /></div>

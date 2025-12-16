@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="footer-top">
                 <div className="footer-top-left">
                     <img width="50rem" src={logo} alt="" style={{ marginBottom: '1rem' }} />
-                    <p>Thank you for visiting my portfolio. As a junior web developer, I’m constantly developing my skills and experience to create innovative web solutions. Feel free to contact me for further discussions!</p>
+                    <p>Thank you for visiting. I am ready to leverage my fullstack expertise to build scalable, high-impact solutions for your business. Let's discuss how we can create value together.</p>
                 </div>
                 <div className="footer-top-right">
                     {/* <div className="footer-email-input">
