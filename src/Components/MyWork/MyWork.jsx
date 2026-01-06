@@ -15,7 +15,7 @@ const MyWork = () => {
                     return (
                         <div key={index} className="mywork-item">
                             <h3>{work.w_name}</h3>
-                            <a href={work.w_link}>
+                            <a href={work.w_link} target="_blank" rel="noreferrer">
                                 <img src={work.w_img} alt="" />
                             </a>
                         </div>

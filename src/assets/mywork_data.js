@@ -20,9 +20,9 @@ const mywork_data = [
     },
     {
         w_no: 3,
-        w_name: "KAVVIAR",
+        w_name: "EcoLens",
         w_img: project3_img,
-        w_link: "https://kavviar.netlify.app",
+        w_link: "https://www.ecolens.my.id",
     },
     {
         w_no: 4,
@@ -32,15 +32,15 @@ const mywork_data = [
     },
     {
         w_no: 5,
-        w_name: "UltraShop",
+        w_name: "Velox Jounrey",
         w_img: project5_img,
-        w_link: "https://github.com/RizalHaryaputra/ultra-shop"
+        w_link: "https://veloxjourney.vercel.app/"
     },
     {
         w_no: 6,
-        w_name: "SILKOM",
+        w_name: "KAVVIAR",
         w_img: project6_img,
-        w_link: "https://github.com/RizalHaryaputra/SILKOM"
+        w_link: "https://kavviar.netlify.app"
     },
 ]
 
