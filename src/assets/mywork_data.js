@@ -32,7 +32,7 @@ const mywork_data = [
     },
     {
         w_no: 5,
-        w_name: "Velox Jounrey",
+        w_name: "Velox Journey",
         w_img: project5_img,
         w_link: "https://veloxjourney.vercel.app/"
     },
