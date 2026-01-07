@@ -17,7 +17,7 @@ const About = () => {
                 <div className="about-right">
                     <div className="about-para">
                         <div className="about-para">
-                            <p>I’m Rizal Haryaputra, a high-achieving <strong>Fullstack Web Developer</strong> specializing in the <strong>Laravel Ecosystem (TALL Stack)</strong> and <strong>AI Integration</strong>. My journey is defined by a commitment to innovation, demonstrated by winning the <strong>1st Place National Abdidaya Award 2025</strong>. I am the creator of 'SADAKAH', a platform officially <strong>adopted by the Gunungkidul Government</strong>.</p>
+                            <p>I’m Rizal Haryaputra, a high-achieving <strong>Fullstack Web Developer</strong> specializing in the <strong>Laravel Ecosystem</strong> and <strong>AI Integration</strong>. My journey is defined by a commitment to innovation, demonstrated by winning the <strong>1st Place National Abdidaya Award 2025</strong>. I am the creator of 'SADAKAH', a platform officially <strong>adopted by the Gunungkidul Government</strong>.</p>
                             <p>Beyond academic excellence, I have professional experience as a <strong>Remote IT Support Specialist</strong> and have secured <strong>Intellectual Property Rights (HKI)</strong> for commercial projects. I ensure that every solution I build is not only technically robust but also impactful. Let’s collaborate and turn your visionary ideas into reality!</p>
                         </div>
                     </div>
