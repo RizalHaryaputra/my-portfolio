@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react'; // Pastikan import useState
 import './Contact.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import mail_icon from '../../assets/mail_icon.svg';
@@ -6,35 +6,82 @@ import location_icon from '../../assets/location_icon.svg';
 import call_icon from '../../assets/call_icon.svg';
 import github_icon from '../../assets/github_icon.svg';
 import instagram_icon from '../../assets/instagram_icon.svg';
+// Import Modal yang baru dibuat
+import Modal from '../Modal/Modal'; 
 
 const Contact = () => {
-    const [result, setResult] = React.useState("");
+    // State untuk Modal
+    const [modal, setModal] = useState({
+        show: false,
+        title: "",
+        message: "",
+        type: "" // 'success' atau 'error'
+    });
+    
+    const [isSubmitting, setIsSubmitting] = useState(false); 
+
+    const closeModal = () => {
+        setModal({ ...modal, show: false });
+    };
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending....");
+        setIsSubmitting(true); // Mulai loading
+        
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "17796a89-0018-46b2-b238-8384fe6bfe6e");
+        formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            alert("Form Submitted Successfully")
-            event.target.reset();
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
+            if (data.success) {
+                // Tampilkan Modal Sukses
+                setModal({
+                    show: true,
+                    title: "Success!",
+                    message: "Thank you! Your message has been sent successfully. I will get back to you soon.",
+                    type: "success"
+                });
+                event.target.reset();
+            } else {
+                // Tampilkan Modal Error dari API
+                setModal({
+                    show: true,
+                    title: "Error!",
+                    message: data.message || "Something went wrong. Please try again.",
+                    type: "error"
+                });
+            }
+        } catch (error) {
+            // Tampilkan Modal Error Jaringan
+            setModal({
+                show: true,
+                title: "Error!",
+                message: "Network error. Please check your connection.",
+                type: "error"
+            });
+        } finally {
+            setIsSubmitting(false); // Selesai loading
         }
     };
+
     return (
         <div id='contact' className="contact">
+            {/* Render Modal Component */}
+            <Modal 
+                show={modal.show} 
+                onClose={closeModal} 
+                title={modal.title} 
+                message={modal.message} 
+                type={modal.type}
+            />
+
             <div className="contact-title">
                 <h1>Contact Me</h1>
                 <img src={theme_pattern} alt="" />
@@ -76,16 +123,20 @@ const Contact = () => {
                 </div>
                 <form onSubmit={onSubmit} className="contact-right">
                     <label htmlFor="name">Your Name</label>
-                    <input type="text" placeholder="Enter your name" name="name" id='name' />
+                    <input type="text" placeholder="Enter your name" name="name" id='name' required />
                     <label htmlFor="email">Your Email</label>
                     <input type="email" placeholder="Enter your email" name="email" id='email' required />
                     <label htmlFor="message">Write your message here</label>
                     <textarea name="message" rows="8" placeholder="Enter your message" id='message' required></textarea>
-                    <button type="submit" className="contact-submit">Submit now</button>
+                    
+                    {/* Tombol submit dengan status loading */}
+                    <button type="submit" className="contact-submit" disabled={isSubmitting}>
+                        {isSubmitting ? "Sending..." : "Submit now"}
+                    </button>
                 </form>
             </div>
         </div>
     )
 }
 
-export default Contact
+export default Contact;
