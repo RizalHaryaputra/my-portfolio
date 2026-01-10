@@ -25,7 +25,7 @@ const Footer = () => {
                     <p>&copy; {new Date().getFullYear()} All rights reserved</p>
                 </div>
                 <div className="footer-bottom-right">
-                    <a href="/cv-rizal-haryaputra-2025.pdf" download="cv-rizal-haryaputra-2025.pdf" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <a href="/cv-rizal-haryaputra-2026.pdf" download="cv-rizal-haryaputra-2025.pdf" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <p>My Resume</p>
                     </a>
                     <a href="#contact" style={{ textDecoration: 'none', color: 'inherit' }}>
