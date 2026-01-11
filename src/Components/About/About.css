@@ -44,6 +44,7 @@
     flex-direction: column;
     gap: 1rem;
     font-size: 20px;
+    line-height: 35px;
     text-align: justify;
 }
 
@@ -113,7 +114,33 @@
     transition: 0.5s;
 }
 
+@media (max-width: 1024px) {
+    .about {
+        margin: 80px 70px;
+    }
+    .about-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .about-para {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    /* .about-achievements {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    } */
+}
+
 @media (max-width: 768px) {
+    .about {
+        margin: 50px 40px;
+    }
+
     .about-sections {
         display: flex;
         flex-wrap: wrap;
@@ -139,6 +166,6 @@
     }
     
     .about {
-        margin: 4rem;
+        margin: 50px 30px;
     }
 }

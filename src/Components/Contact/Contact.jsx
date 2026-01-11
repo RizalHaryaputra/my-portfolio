@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Pastikan import useState
+import React, { useState } from 'react';
 import './Contact.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import mail_icon from '../../assets/mail_icon.svg';
@@ -6,16 +6,15 @@ import location_icon from '../../assets/location_icon.svg';
 import call_icon from '../../assets/call_icon.svg';
 import github_icon from '../../assets/github_icon.svg';
 import instagram_icon from '../../assets/instagram_icon.svg';
-// Import Modal yang baru dibuat
 import Modal from '../Modal/Modal'; 
 
 const Contact = () => {
-    // State untuk Modal
+    
     const [modal, setModal] = useState({
         show: false,
         title: "",
         message: "",
-        type: "" // 'success' atau 'error'
+        type: ""
     });
     
     const [isSubmitting, setIsSubmitting] = useState(false); 
@@ -26,10 +25,9 @@ const Contact = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setIsSubmitting(true); // Mulai loading
+        setIsSubmitting(true);
         
         const formData = new FormData(event.target);
-
         formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
 
         try {
@@ -41,7 +39,6 @@ const Contact = () => {
             const data = await response.json();
 
             if (data.success) {
-                // Tampilkan Modal Sukses
                 setModal({
                     show: true,
                     title: "Success!",
@@ -50,7 +47,6 @@ const Contact = () => {
                 });
                 event.target.reset();
             } else {
-                // Tampilkan Modal Error dari API
                 setModal({
                     show: true,
                     title: "Error!",
@@ -59,7 +55,6 @@ const Contact = () => {
                 });
             }
         } catch (error) {
-            // Tampilkan Modal Error Jaringan
             setModal({
                 show: true,
                 title: "Error!",
@@ -67,7 +62,7 @@ const Contact = () => {
                 type: "error"
             });
         } finally {
-            setIsSubmitting(false); // Selesai loading
+            setIsSubmitting(false);
         }
     };
 
@@ -86,10 +81,11 @@ const Contact = () => {
                 <h1>Contact Me</h1>
                 <img src={theme_pattern} alt="" />
             </div>
+            
             <div className="contact-section">
                 <div className="contact-left">
                     <h1>Let’s Talk</h1>
-                    <p>Feel free to get in touch! Whether you have a project in mind or simply want to say hello, I’d love to hear from you. Drop me a message and let’s make something great together. I’m always open to new opportunities and collaborations.</p>
+                    <p>Feel free to get in touch! Whether you have a project in mind or simply want to say hello, I’d love to hear from you. Drop me a message and let’s make something great together.</p>
                     <div className="contact-details">
                         <div className="contact-detail">
                             <img src={location_icon} alt="" />
@@ -97,40 +93,47 @@ const Contact = () => {
                         </div>
                         <div className="contact-detail">
                             <img src={mail_icon} alt="" />
-                            <a href="mailto:rzlhryptr@gmail.com" style={{ color: 'white', textDecoration: 'none' }}>
+                            <a href="mailto:rzlhryptr@gmail.com">
                                 <p>rzlhryptr@gmail.com</p>
                             </a>
                         </div>
                         <div className="contact-detail">
                             <img src={call_icon} alt="" />
-                            <a href="https://wa.me/6287855038324?text=Hi%2C%20Rizal" style={{ color: 'white', textDecoration: 'none' }}>
+                            <a href="https://wa.me/6287855038324?text=Hi%2C%20Rizal">
                                 <p>+62 878 5503 8324</p>
                             </a>
                         </div>
+                        {/* Social Media Links */}
                         <div className="contact-detail">
-                            <img src={github_icon} alt="" style={{ width: '34px', height: '34px' }} />
-                            <a href="https://github.com/RizalHaryaputra" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>
+                            <img src={github_icon} alt="Github" style={{ width: '30px', height: '30px' }} />
+                            <a href="https://github.com/RizalHaryaputra" target="_blank" rel="noopener noreferrer">
                                 <p>RizalHaryaputra</p>
                             </a>
                         </div>
                         <div className="contact-detail">
-                            <img src={instagram_icon} alt="" style={{ width: '34px', height: '34px' }} />
-                            <a href="https://www.instagram.com/rzalhrya_" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>
+                            <img src={instagram_icon} alt="Instagram" style={{ width: '30px', height: '30px' }} />
+                            <a href="https://www.instagram.com/rzalhrya_" target="_blank" rel="noopener noreferrer">
                                 <p>rzalhrya_</p>
                             </a>
                         </div>
                     </div>
                 </div>
+
                 <form onSubmit={onSubmit} className="contact-right">
                     <label htmlFor="name">Your Name</label>
                     <input type="text" placeholder="Enter your name" name="name" id='name' required />
+                    
                     <label htmlFor="email">Your Email</label>
                     <input type="email" placeholder="Enter your email" name="email" id='email' required />
+                    
                     <label htmlFor="message">Write your message here</label>
                     <textarea name="message" rows="8" placeholder="Enter your message" id='message' required></textarea>
                     
-                    {/* Tombol submit dengan status loading */}
-                    <button type="submit" className="contact-submit" disabled={isSubmitting}>
+                    <button 
+                        type="submit" 
+                        className={`contact-submit ${isSubmitting ? 'disabled' : ''}`} 
+                        disabled={isSubmitting}
+                    >
                         {isSubmitting ? "Sending..." : "Submit now"}
                     </button>
                 </form>
