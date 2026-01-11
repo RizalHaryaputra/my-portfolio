@@ -173,6 +173,10 @@
     .contact-section {
         gap: 40px;
     }
+    
+    .contact-left h1 {
+        font-size: 28px;
+    }
 
     .contact-left p {
         font-size: 16px;

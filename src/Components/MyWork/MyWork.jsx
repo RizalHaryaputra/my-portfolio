@@ -21,7 +21,7 @@ const MyWork = () => {
             <ProjectModal project={selectedProject} onClose={closeModal} />
 
             <div className="mywork-title">
-                <h1>My Latest Work</h1>
+                <h1>My Projects</h1>
                 <img src={theme_pattern} alt="" />
             </div>
             
