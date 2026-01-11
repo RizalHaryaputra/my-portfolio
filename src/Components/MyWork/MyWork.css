@@ -32,12 +32,11 @@
 }
 
 .mywork-card {
-    border-radius: 10px;
-    background: rgba(255,255,255,0.25);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.51);
-    border-radius: 15px;
+    border-radius: 20px;
+    /* Efek Kaca */
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -80,11 +79,17 @@
 }
 
 .card-overlay span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
     color: white;
+    text-decoration: none;
     font-weight: 500;
-    border: 1px solid white;
-    padding: 8px 16px;
-    border-radius: 20px;
+    transition: 0.3s;
+    width: fit-content;
 }
 
 .mywork-card:hover .card-overlay {
