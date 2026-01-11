@@ -1,10 +1,11 @@
 .mywork {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 5rem;
-    margin: 5rem 7rem;
+    justify-content: center;
+    gap: 80px;
+    margin: 5rem 12rem;
+    padding-bottom: 5rem;
 }
 
 .mywork-title {
@@ -23,48 +24,114 @@
     width: 50%;
 }
 
-.mywork-item h3 {
-    margin: 1rem;
-}
-
 .mywork-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Grid 3 kolom */
+    gap: 40px;
+    width: 100%;
+}
+
+/* Card Styling Baru */
+.mywork-card {
+    border-radius: 10px;
+    background: rgba(255,255,255,0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.51);/* Warna gelap ungu */
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mywork-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(180, 21, 255, 0.2);
+    border-color: #B415FF;
+    border-width: 2px;
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10.5; /* Menjaga rasio gambar */
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.mywork-card:hover .card-image-wrapper img {
+    transform: scale(1.05); /* Zoom effect gambar */
+}
+
+/* Overlay hitam saat hover */
+.card-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 5rem;
-
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-.mywork-item img {
-    box-sizing: border-box;
-    width: 350px;
+.card-overlay span {
+    color: white;
+    font-weight: 500;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 20px;
 }
 
-.mywork-item {
-    transition: 0.5s;
+.mywork-card:hover .card-overlay {
+    opacity: 1;
 }
 
-.mywork-item:hover {
-    transform: scale(1.05);
+.card-info {
+    padding: 20px;
 }
 
-.mywork-item img:hover {
-    border: 3px solid   #DA7C25;
-    border-radius: 10px;
+.card-info h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
-img {
-    border-radius: 10px;
+.card-info p {
+    margin: 0;
+    color: #d8d8d8;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+    .mywork-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mywork { margin: 80px 70px; }
 }
 
 @media (max-width: 768px) {
-    .mywork {
-        margin: 4rem;
+    .mywork-container {
+        grid-template-columns: 1fr;
+    }
+    .mywork-title h1 { font-size: 50px; padding: 0; }
+    .mywork { margin: 50px 30px; }
+
+    .mywork-title {
+    position: relative;
+}
+
+    .mywork-title h1 {
+        font-size: 2.5rem;
     }
 
-    .mywork-item img {
-        width: 300px;
-    }
 }
