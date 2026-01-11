@@ -1,11 +1,10 @@
 .services {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 5rem;
-    margin: 5rem 7rem;
-    padding-bottom: 5rem;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
 }
 
 .services-title {
@@ -22,56 +21,115 @@
     right: 0;
     z-index: -1;
     width: 50%;
-}   
+}
 
+/* --- GRID CONTAINER --- */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+/* --- SERVICE CARD --- */
 .services-format {
-    max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    padding: 2rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.25);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.51);
-    transition: 0.5s;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    background: transparent; 
+    transition: 0.4s;
     cursor: pointer;
 }
 
-.services-format p {
-    text-align: justify;
+/* Nomor Urut (01, 02, dst) */
+.services-format h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.services-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-}
-
-.services-format:hover {
-    transform: scale(1.03);
-    border: 3px solid #B923E1;
-}
-
+/* Judul Service */
 .services-format h2 {
+    font-size: 2rem;
+    font-weight: 800;
     background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: 1000;
-    font-size: 1.3rem;
+}
+
+/* Deskripsi */
+.services-format p {
+    color: #d4d4d4;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 300px; 
+    text-align: left; 
+}
+
+/* Tombol Read More (Opsional - Sesuaikan dengan JSX) */
+.services-readmore {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.services-readmore p {
+    font-size: 16px;
+    max-width: fit-content;
+}
+
+/* --- HOVER EFFECTS --- */
+.services-format:hover {
+    transform: scale(1.05);
+    border: 2px solid #ff00ff;
+    background: linear-gradient(45deg, #2a002a, #1a0515);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, #2d1038, #161513);
+}
+
+.services-format:hover h3 {
+    color: #DA7C25; 
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 1024px) {
+    .services {
+        margin: 80px 70px;
+    }
+    
+    .services-format h2 {
+        font-size: 32px;
+    }
 }
 
 @media (max-width: 768px) {
     .services {
-        margin: 4rem;
+        margin: 50px 40px;
+        gap: 40px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .services-format {
+        padding: 30px;
+    }
+    
+    .services-format h2 {
+        font-size: 28px;
+    }
+    
+    .services-format p {
+        font-size: 16px;
         max-width: 100%;
     }
 }
-

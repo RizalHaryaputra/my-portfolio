@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './MyWork.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import mywork_data from '../../assets/mywork_data';
-import ProjectModal from './ProjectModal'; // Import modal
+import ProjectModal from './ProjectModal';
 
 const MyWork = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -37,7 +37,6 @@ const MyWork = () => {
                             </div>
                             <div className="card-info">
                                 <h3>{work.w_name}</h3>
-                                {/* Menampilkan tag pertama sebagai kategori singkat */}
                                 <p>{work.w_tags && work.w_tags[0]}</p> 
                             </div>
                         </div>
@@ -45,7 +44,6 @@ const MyWork = () => {
                 })}
             </div>
             
-            {/* Opsional: Tombol Show More jika project > 6 */}
             {/* <div className="mywork-showmore">
                 <p>Show More</p>
                 <img src={arrow_icon} alt="" />

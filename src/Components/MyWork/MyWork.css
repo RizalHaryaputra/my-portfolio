@@ -26,18 +26,17 @@
 
 .mywork-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Grid 3 kolom */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     width: 100%;
 }
 
-/* Card Styling Baru */
 .mywork-card {
     border-radius: 10px;
     background: rgba(255,255,255,0.25);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.51);/* Warna gelap ungu */
+    border: 1px solid rgba(255, 255, 255, 0.51);
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
@@ -54,7 +53,7 @@
 .card-image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/10.5; /* Menjaga rasio gambar */
+    aspect-ratio: 16/10.5;
     overflow: hidden;
 }
 
@@ -66,10 +65,9 @@
 }
 
 .mywork-card:hover .card-image-wrapper img {
-    transform: scale(1.05); /* Zoom effect gambar */
+    transform: scale(1.05);
 }
 
-/* Overlay hitam saat hover */
 .card-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -113,9 +111,6 @@
 }
 
 @media (max-width: 1024px) {
-    .mywork-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .mywork { margin: 80px 70px; }
 }
 
