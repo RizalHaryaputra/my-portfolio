@@ -45,13 +45,13 @@
 }
 
 li .link:hover {
-    color: #DA7C25;
+    color: #4361ee;
 }
 
 .nav-connect {
     padding: 1rem 2rem;
     border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
     cursor: pointer;
     transition: 0.5s;
     font-size: 18px;
@@ -59,6 +59,7 @@ li .link:hover {
 
 .nav-connect:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(181, 23, 158, 0.7);
 }
 
 /* Sembunyikan icon mobile di desktop */
@@ -103,7 +104,7 @@ li .link:hover {
         align-items: center;
         gap: 40px;
 
-        background: rgba(31, 0, 22, 0.9);
+        background: rgba(0, 2, 31, 0.9);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
 

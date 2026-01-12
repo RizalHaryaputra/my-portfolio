@@ -39,7 +39,7 @@
 
 .contact-left h1 {
     font-size: 3rem;
-    background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -76,7 +76,10 @@
 }
 
 .contact-detail a:hover p {
-    color: #DA7C25;
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* --- KANAN (FORM) --- */
@@ -89,23 +92,23 @@
 }
 
 .contact-right label {
-    color: #D8D8D8;
+    color: #FFFFFF;
     font-size: 20px;
     font-weight: 500;
 }
 
 .contact-right input,
 .contact-right textarea {
-    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     width: 100%;
     padding: 25px;
-    border-radius: 4px;
-    background: #32323c;
-    color: #A0A0A0;
+    color: white;
     font-family: 'Outfit', sans-serif;
     font-size: 20px;
     outline: none;
-    border: 2px solid transparent;
     transition: 0.3s;
 }
 
@@ -115,18 +118,23 @@
 
 .contact-right input:focus,
 .contact-right textarea:focus {
-    border-color: #B923E1;
+    border: 2px solid #4361ee; 
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 40px rgba(67, 97, 238, 0.4), 
+                0px 0px 20px rgba(181, 23, 158, 0.3);
+    background-image: none; 
     color: #fff;
-    background: #3c3c46;
 }
 
 .contact-submit {
+    box-shadow: 0 0 15px rgba(67, 97, 238, 0.5);
     border: none;
     color: white;
     border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
-    font-size: 22px;
-    padding: 20px 60px;
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
+    font-size: 20px;
+    padding: 1rem 2rem;
     cursor: pointer;
     transition: 0.3s;
     font-family: 'Outfit', sans-serif;
@@ -134,6 +142,7 @@
 
 .contact-submit:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(181, 23, 158, 0.7);
 }
 
 .contact-submit.disabled {

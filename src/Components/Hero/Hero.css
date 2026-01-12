@@ -17,11 +17,12 @@
     width: 60%;
     text-align: center;
     font-weight: 600;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hero h1 span {
-    background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -40,31 +41,49 @@
     font-size: 17px;
 }
 
-.hero-action .hero-connect {
+/* Tema 1 - Orange to Purple */
+/* .hero-action .hero-connect {
     padding: 1rem 2rem;
     border-radius: 50px;
     background: linear-gradient(267deg, #DA7C25, 50.36%, #B923E1 102.06%);
     cursor: pointer;
     transition: 0.5s;
+} */
+
+/* Tema 2 - Blue to Purple */
+.hero-action .hero-connect {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    /* Menggunakan Biru Elektrik ke Ungu Neon */
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    /* Tambahkan glow agar terlihat menyala di background hitam */
+    box-shadow: 0 0 15px rgba(67, 97, 238, 0.5);
 }
 
 .hero-action .hero-connect:hover {
     transform: scale(1.05);
-
+    box-shadow: 0 0 25px rgba(181, 23, 158, 0.7);
 }
 
 .hero-action .hero-resume {
     padding: 1rem 2rem;
     border-radius: 50px;
-    border: 1px solid white;
+    border: 2px solid white;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .hero-action .hero-resume:hover {
-    border: 1px solid #B923E1;
-    color: #B923E1;
+    color: #4361ee;
     transform: scale(1.05);
+    border: 2px solid #4361ee; 
+    background: linear-gradient(45deg, #0a0a1a, #1a0518);
+    box-shadow: 0px 10px 40px rgba(67, 97, 238, 0.4), 
+                0px 0px 20px rgba(181, 23, 158, 0.3);
+    background-image: none; 
 }
 
 @media (max-width: 1200px) {

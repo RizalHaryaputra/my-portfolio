@@ -60,7 +60,7 @@
 }
 
 .about-para strong {
-    background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -98,7 +98,7 @@
     display: block;
     height: 100%;
     border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
 }
 
 .about-skill:hover {
@@ -136,7 +136,7 @@
 .about-achievement h2 {
     font-size: 40px;
     font-weight: 800; /* Max standard bold */
-    background: linear-gradient(267deg, #DA7C25 50.36%, #B923E1 102.06%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

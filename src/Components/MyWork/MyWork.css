@@ -44,9 +44,10 @@
 
 .mywork-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(180, 21, 255, 0.2);
-    border-color: #B415FF;
+    border-color: #4361ee; 
     border-width: 2px;
+    box-shadow: 0 10px 40px rgba(67, 97, 238, 0.3), 
+                0 0 20px rgba(181, 23, 158, 0.2);
 }
 
 .card-image-wrapper {
@@ -84,12 +85,17 @@
     justify-content: center;
     padding: 12px 30px;
     border-radius: 50px;
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s;
-    width: fit-content;
+    box-shadow: 0 0 15px rgba(67, 97, 238, 0.5);
+}
+
+.card-overlay span:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(181, 23, 158, 0.8);
 }
 
 .mywork-card:hover .card-overlay {
