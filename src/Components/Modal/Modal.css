@@ -13,7 +13,7 @@
 }
 
 .modal-content {
-    background: #1f0016; /* Menyesuaikan tema gelap portfolio Anda */
+    background: #03001fff; /* Menyesuaikan tema gelap portfolio Anda */
     padding: 2rem;
     border-radius: 15px;
     width: 90%;
@@ -25,7 +25,7 @@
 
 /* Styling untuk tipe sukses dan gagal */
 .modal-content.success {
-    border-color: #00ff00;
+    border-color: #4361ee;
 }
 
 .modal-content.error {
@@ -42,7 +42,7 @@
 .modal-header h3 {
     margin: 0;
     font-size: 24px;
-    background: linear-gradient(270deg, #DF8908 50%, #B415FF 100%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -73,7 +73,7 @@
 .modal-btn {
     padding: 10px 25px;
     border-radius: 50px;
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
     color: white;
     border: none;
     cursor: pointer;
