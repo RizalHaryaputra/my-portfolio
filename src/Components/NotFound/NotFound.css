@@ -1,0 +1,105 @@
+.not-found {
+    height: 80vh; /* Mengambil sebagian besar tinggi layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+}
+
+.not-found-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* --- JUDUL 404 BESAR --- */
+.not-found h1 {
+    font-size: 180px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+    
+    /* Gradient Text Efek Neon */
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Efek Glow di belakang teks */
+    filter: drop-shadow(0 0 15px rgba(67, 97, 238, 0.5));
+    
+    /* Animasi napas halus */
+    animation: glowPulse 3s infinite alternate;
+}
+
+.not-found h2 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.not-found p {
+    font-size: 18px;
+    color: #d4d4d4;
+    margin-bottom: 30px;
+}
+
+/* --- TOMBOL KEMBALI --- */
+.not-found-btn {
+    padding: 18px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    
+    /* Gradient Konsisten dengan Tema */
+    background: linear-gradient(267deg, #4361ee 0%, #b5179e 100%);
+    
+    /* Glow awal */
+    box-shadow: 0 0 15px rgba(67, 97, 238, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.not-found-btn:hover {
+    transform: scale(1.05);
+    /* Glow lebih terang saat hover */
+    box-shadow: 0 0 30px rgba(181, 23, 158, 0.6), 
+                0 0 10px rgba(67, 97, 238, 0.8);
+}
+
+/* --- ANIMASI --- */
+@keyframes glowPulse {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(67, 97, 238, 0.4));
+    }
+    100% {
+        filter: drop-shadow(0 0 25px rgba(181, 23, 158, 0.6));
+    }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .not-found h1 {
+        font-size: 120px;
+    }
+    
+    .not-found h2 {
+        font-size: 30px;
+    }
+    
+    .not-found p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .not-found-btn {
+        padding: 15px 40px;
+        font-size: 18px;
+    }
+}
