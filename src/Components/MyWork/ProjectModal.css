@@ -20,7 +20,7 @@
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
-    box-shadow: 0 0 50px rgba(180, 21, 255, 0.1);
+    box-shadow: 0 0 20px rgba(67, 98, 238, 0.21);
     animation: slideUp 0.4s ease;
 }
 
