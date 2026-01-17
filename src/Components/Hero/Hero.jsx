@@ -10,12 +10,24 @@ const Hero = () => {
             <h1><span>Hi, I’m Rizal Haryaputra, </span>Fullstack Developer based in Indonesia</h1>
             {/* <p>This is a paragraph of text</p> */}
             <div className="hero-action">
-                <div className="hero-connect"><AnchorLink className='link' href='#contact' offset={50}>Connect With Me</AnchorLink></div>
-                <a href="/cv-rizal-haryaputra-2026.pdf" download="cv-rizal-haryaputra-2025.pdf" target="_blank" rel="noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
-                    <div className="hero-resume">My resume</div>
+                <a
+                    href="#contact"
+                    className="hero-connect"
+                >
+                    Connect With Me
                 </a>
 
+                <a
+                    href="/cv-rizal-haryaputra-2026.pdf"
+                    download="cv-rizal-haryaputra-2025.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hero-resume"
+                >
+                    My Resume
+                </a>
             </div>
+
         </div>
     )
 }

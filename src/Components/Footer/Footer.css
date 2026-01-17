@@ -83,6 +83,15 @@
     flex-wrap: wrap;
 }
 
+.footer-bottom-right p {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-bottom-right p:hover {
+    color: #4361ee;
+}
+
 @media (max-width: 768px) {
     .footer {
         padding: 2rem 3vw;
