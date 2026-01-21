@@ -19,7 +19,7 @@ const Hero = () => {
 
                 <a
                     href="/cv-rizal-haryaputra-2026.pdf"
-                    download="cv-rizal-haryaputra-2025.pdf"
+                    download="cv-rizal-haryaputra-2026.pdf"
                     target="_blank"
                     rel="noreferrer"
                     className="hero-resume"
