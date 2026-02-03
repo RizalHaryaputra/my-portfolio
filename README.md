@@ -14,7 +14,7 @@ A modern, high-performance Personal Portfolio website built to showcase my proje
 * **🔍 SEO Optimized:** Integrated with `react-helmet-async` for meta tags management, `sitemap.xml`, and `robots.txt`.
 * **✉️ Functional Contact Form:** Powered by Web3Forms for direct email delivery without a backend server.
 * **🛑 Custom 404 Page:** Immersive "Signal Lost" error page with redirect logic.
-* **🖼️ Interactive Project Gallery:** Dynamic project cards with hover effects and detailed modals (coming soon).
+* **🖼️ Interactive Project Gallery:** Dynamic project cards with hover effects and detailed modals.
 
 ---
 
