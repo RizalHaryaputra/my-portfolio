@@ -37,7 +37,6 @@ const About = () => {
                     <h2>30+</h2>
                     <p>Web Development Projects Completed</p>
                 </div>
-                {/* Garis pemisah ditangani oleh CSS border */}
                 <div className="about-achievement">
                     <h2>5+</h2>
                     <p>Web Development Trainings Completed</p>
