@@ -4,6 +4,8 @@ import project3_img from '../assets/project3.png'
 import project4_img from '../assets/project4.png'
 import project5_img from '../assets/project5.png'
 import project6_img from '../assets/project6.png'
+import project7_img from '../assets/project7.png'
+import project8_img from '../assets/project8.png'
 
 const mywork_data = [
     {
@@ -32,19 +34,19 @@ const mywork_data = [
     },
     {
         w_no: 4,
-        w_name: "Fifa Analytics",
-        w_img: project4_img,
-        w_link: "https://fifa-analytics.streamlit.app",
-        w_desc: "A data analysis application for FIFA World Cup 2022 that provides insights into player and team performance using various data visualization techniques.",
-        w_tags: ["Python", "Streamlit", "Pandas", "Plotly Express", "Scikit-learn"]
+        w_name: "Mantapp Factory",
+        w_img: project7_img,
+        w_link: "https://factory.protolive.my.id/",
+        w_desc: "A professional corporate website built to showcase company profiles and services. Configured with secure hosting and optimized server deployment.",
+        w_tags: ["WordPress", "Blocksy", "GreenShift"]
     },
     {
         w_no: 5,
-        w_name: "Velox Journey",
-        w_img: project5_img,
-        w_link: "https://veloxjourney.vercel.app/",
-        w_desc: "A private trip package booking platform that offers a seamless user experience (UX), responsive design, and engaging interactions.",
-        w_tags: ["Nuxt.js", "Tailwind CSS", "AOS Animation"]
+        w_name: "Hanchingu",
+        w_img: project8_img,
+        w_link: "https://hanchingu.com/",
+        w_desc: "A premier information hub and community platform for Korean study enthusiasts in Indonesia. Developed to bridge the gap for Indonesian students in exploring Korean culture, language, and career opportunities through an optimized and user-friendly web experience.",
+        w_tags: ["WordPress", "Blocksy", "GreenShift"]
     },
     {
         w_no: 6,
